@@ -9,7 +9,7 @@ using namespace std;
 class Api
 {
 public:
-	virtual void Operation(string str) const = 0;
+	virtual void Operation(string& str) const = 0;
 	virtual ~Api(){cout << "Api::~Api()" << endl;};
 };
 
@@ -23,7 +23,7 @@ public:
 		cout << "ImplA::~ImplA()" << endl;
 	}
 
-	void Operation(string str) const {
+	void Operation(string& str) const {
 		cout << "ImplA::Operation():" + str  << endl;
 	}
 	
@@ -40,7 +40,7 @@ public:
 		cout << "ImplB::ImplB()" << endl;
 	}
 
-	void Operation(string str) const {
+	void Operation(string& str) const {
 		cout << "ImplB::Operation():" + str  << endl;
 	}
 };
@@ -55,7 +55,8 @@ public:
 int main(int argc, char const *argv[])
 {
 	Api* api = Factory::CreateApi(1);
-	api->Operation("test");
+	string str("test");
+	api->Operation(str);
 	delete api;
 	return 0;
 }
