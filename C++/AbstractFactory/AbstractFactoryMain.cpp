@@ -5,11 +5,14 @@ using namespace std;
 int main(int argc,char* argv[]) 
 { 
 	AbstractFactory* cf1 = new ConcreteFactory1();
-	cf1->CreateProductA(); 
-	cf1->CreateProductB();
+	delete cf1->CreateProductA(); 
+	delete cf1->CreateProductB();
+	delete cf1;
 
 	AbstractFactory* cf2 = new ConcreteFactory2(); 
-	cf2->CreateProductA(); 
-	cf2->CreateProductB();
+	delete cf2->CreateProductA(); 
+	delete cf2->CreateProductB();
+	delete cf2;
+	
     return 0; 
 }
