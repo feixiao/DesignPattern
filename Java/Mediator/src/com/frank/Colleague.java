@@ -26,7 +26,5 @@ public abstract class Colleague {
        return isHappy ? "Happy" : "Unhappy";
     }
 
-    public void say() {
-
-    }
+    public abstract  void say();
 }
