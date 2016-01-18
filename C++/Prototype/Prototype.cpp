@@ -10,9 +10,9 @@ Prototype::~Prototype() {
 	cout<< "Prototype::~Prototype()" <<endl;
 }
 
-Prototype* Prototype::Clone() const{ 
+/*Prototype* Prototype::Clone() const{ 
 	return 0; 
-}
+}*/
 
 ConcretePrototype::ConcretePrototype(){
 	cout<< "ConcretePrototype::ConcretePrototype()" <<endl;
