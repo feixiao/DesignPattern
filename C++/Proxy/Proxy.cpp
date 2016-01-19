@@ -8,7 +8,7 @@ Subject::Subject() {
 }
 
 Subject::~Subject() {
-
+	cout << "Subject::~Subject" << endl;
 }
 
 ConcreteSubject::ConcreteSubject() {
@@ -16,7 +16,7 @@ ConcreteSubject::ConcreteSubject() {
 }
 
 ConcreteSubject::~ConcreteSubject() {
-
+	cout << "ConcreteSubject::~ConcreteSubject" << endl;
 }
 void ConcreteSubject::Request() { 
 	cout << "ConcreteSubject......request ...." << endl; 
