@@ -1,7 +1,7 @@
 CC = gcc
 XX = g++
 CFLAGS = -Wall -O -g
-TARGET = command
+TARGET = iterator
 
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
