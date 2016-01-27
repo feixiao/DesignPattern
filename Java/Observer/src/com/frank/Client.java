@@ -20,5 +20,7 @@ public class Client {
 
         sub.detach(o2);
         sub.setSubjectState("DDD");
+
+        sub.setSubjectState("EEE");
     }
 }
