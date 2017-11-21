@@ -36,4 +36,12 @@ int main() {
     // 执行
     sw1.Clicked();
     sw2.Clicked();
+
+    Switch all_on;
+
+    //　关联多个
+    all_on.Clicked.connect(&lp1,&Light::TurnOn);
+    all_on.Clicked.connect(&lp2,&Light::TurnOn);
+
+    all_on.Clicked();
 }
